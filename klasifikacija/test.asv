@@ -1,6 +1,0 @@
-clear all;
-load('classifier.mat');
-computation = input('Please enter the computation: ','s');
-img = imread(fullfile(rootFolder, 'WithPollen', 'Bee_120.jpg'));
-[labelIdx, scores] = predict(categoryClassifier, img);
-categoryClassifier.Labels(labelIdx)

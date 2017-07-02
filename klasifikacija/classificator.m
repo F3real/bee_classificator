@@ -6,7 +6,7 @@ imgSets = [ imageSet(fullfile(rootFolder, 'NoPollen')), ...
 [imgSets.Count]
 
 % Split sets into training and validation
-[trainingSets, validationSets] = partition(imgSets, 0.3, 'randomize');
+[trainingSets, validationSets] = partition(imgSets, 0.4, 'randomize');
 % extracts SURF features from all images and constructs the visual vocabulary 
 % by reducing the number of features using K-means clustering
 bag = bagOfFeatures(trainingSets,'CustomExtractor', @f_extractor);
